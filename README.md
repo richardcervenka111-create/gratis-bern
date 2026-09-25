@@ -1,6 +1,6 @@
 # Gratis Bern
 
-Was in Bern nichts kostet: die Aarebäder Marzili und Lorraine, der BärenPark rund um die Uhr, die Parks, über hundert Trinkbrunnen, dazu die fünf Gratis-Museumssamstage im August (18 Häuser, 2026: 1., 8., 15., 22., 29. August), die Kinder-Sonntage im Zentrum Paul Klee und die KulturLegi. Jede Zeile mit Quelle und Prüfdatum. DE/EN/SK, kein Tracking.
+Was in Bern nichts kostet: die Aarebäder Marzili und Lorraine, der BärenPark rund um die Uhr, die Parks, über hundert Trinkbrunnen, dazu die fünf Gratis-Museumssamstage im August (18 Häuser, 2026: 1., 8., 15., 22., 29. August), die Kinder-Sonntage im Zentrum Paul Klee und die KulturLegi. Jede Zeile mit Quelle und Prüfdatum. DE/EN, kein Tracking.
 
 Live: **https://richardcervenka111-create.github.io/gratis-bern/**
 
