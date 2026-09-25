@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gratis Bern</title>
+<meta name="description" content="Was in Bern nichts kostet: Aarebäder, BärenPark, Gratis ins Museum an den August-Samstagen, Kinder-Sonntage, KulturLegi. Jede Zeile mit Quelle und Prüfdatum. DE/EN/SK, kein Tracking.">
+<style>
+:root{--bg:#1a2410;--card:#25321a;--line:#3a4d28;--txt:#f5f8ee;--mut:#b9c8a4;--acc:#ffd166;--ok:#7ee2a8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:17px/1.5 -apple-system,system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding:16px 16px 40px}
+h1{font-size:24px;margin:8px 0 2px}.sub{color:var(--mut);font-size:14px;margin-bottom:12px}
+.lang{float:right}.lang button{background:none;border:1px solid var(--line);color:var(--mut);border-radius:8px;padding:4px 8px;font-size:13px;cursor:pointer}.lang button[aria-pressed="true"]{background:var(--acc);color:#321;border-color:var(--acc)}
+h2{font-size:17px;margin:20px 0 8px;color:var(--acc)}
+.o{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0}
+.o b{font-size:16px}.o .p{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;background:var(--ok);color:#062;font-weight:700;margin-left:6px}
+.o .d{font-size:14px;margin-top:4px}.o .m{font-size:13px;color:var(--mut);margin-top:6px}.o a{color:var(--acc)}
+.list{font-size:14px;color:var(--mut);margin-top:6px}
+.foot{color:var(--mut);font-size:13px;margin-top:26px;border-top:1px solid var(--line);padding-top:10px}.foot a{color:var(--acc)}
+</style>
+</head>
+<body>
+<main>
+<div class="lang" role="group"><button data-l="de" aria-pressed="true">DE</button><button data-l="en" aria-pressed="false">EN</button><button data-l="sk" aria-pressed="false">SK</button></div>
+<h1 id="h"></h1><div class="sub" id="s"></div>
+<h2 id="h1"></h2><div id="always"></div>
+<h2 id="h2"></h2><div id="dates"></div>
+<h2 id="h3"></h2><div id="cheap"></div>
+<div class="foot" id="foot"></div>
+</main>
+<script>
+(function(){
+const V="25.9.2026";
+const MUSEEN=["Abegg-Stiftung (Riggisberg)","ALPS Alpines Museum der Schweiz","Antikensammlung Bern (ab 8. 8., 14–17 Uhr)","Bernisches Historisches Museum","Botanischer Garten Bern","Einstein-Haus","Erlacherhof (ab 15. 8., 10–14 Uhr, Führungen 10.30, 11.45, 13.00)","Kornhausforum","Kunsthalle Bern (bis 22. 8.)","Kunstmuseum Bern","Medizinsammlung Inselspital (15. und 29. 8.)","Moneyverse im Kaiserhaus","Museum für Kommunikation (ab 8. 8.)","Naturhistorisches Museum Bern (ab 8. 8.)","Polit-Forum Bern (ab 8. 8.)","Psychiatrie-Museum Bern","Schweizer Schützenmuseum","Zentrum Paul Klee"];
+const L={
+ de:{h:"Gratis Bern",s:"Was in dieser Stadt nichts kostet, mit Quelle und Prüfdatum ("+V+"). Für Familien mit kleinem Budget, Neuzugezogene und alle, die es nicht wussten.",h1:"Immer gratis",h2:"An bestimmten Tagen gratis",h3:"Stark vergünstigt",src:"Quelle",chk:"geprüft",
+  always:[
+   ["Marzilibad und Lorrainebad","gratis","Die Aarebäder der Stadt kosten keinen Eintritt: 50-m-Becken, Kinderbecken, Sprungturm, Liegewiesen, Aare-Zugang. Nur die Garderobenkästen kosten. Hinweis: das Marzili wird seit 14. 9. 2026 in einer zweiten Bauetappe saniert.","https://www.sportamt-bern.ch/sportanlage/marzili/","Sportamt Bern"],
+   ["BärenPark","gratis","Rund um die Uhr, jeden Tag, frei zugänglich, direkt an der Aare beim Nydeggbrücke. Ebenfalls gratis: die Tieranlagen im Dählhölzli-Wald, am Aareufer und der Kinderzoo; nur das Vivarium des Tierparks kostet.","https://tierpark-bern.ch/baerenpark/oeffnungszeiten/","Tierpark Bern"],
+   ["Rosengarten, Gurten-Wiese, Aareufer, Elfenau","gratis","Öffentliche Parks der Stadt, ohne Eintritt. Die Gurtenbahn kostet, der Fussweg hinauf nicht.","https://www.bern.ch","Stadt Bern (öffentliche Grünanlagen)"],
+   ["Öffentliche Brunnen, Grillstellen, Bücherschränke","gratis","Trinkwasser aus über 100 Brunnen, 109 Grillstellen, 38 offene Bücherschränke. Karten: bern-trinkwasser, grillstelle-bern, buecherschraenke-bern (gleicher Ordner).","https://www.openstreetmap.org/copyright","OpenStreetMap, Stand 24. 9. 2026"],
+  ],
+  dates:[
+   ["Gratis ins Museum: die fünf August-Samstage","1., 8., 15., 22., 29. August 2026","Zum 11. Mal öffnen 18 Museen und Kulturinstitutionen in und um Bern samstags im August gratis, ein Projekt von Museen Bern mit der Burgergemeinde Bern und dem Migros-Kulturprozent (2025: rund 53 000 Besuche). Einzelne Häuser haben abweichende Daten oder Zeiten, siehe Liste.","https://gratisinsmuseum.ch/","gratisinsmuseum.ch",MUSEEN],
+   ["Zentrum Paul Klee: Kinder und Jugendliche bis 16 jeden Sonntag gratis","jeden Sonntag","Ausstellungseintritt für Kinder und Jugendliche bis 16 Jahre ist jeden Sonntag gratis. Erwachsene regulär CHF 15, Familienticket 1 Erwachsener + Kinder CHF 21.","https://www.zpk.org/de/infos","zpk.org › Infos"],
+  ],
+  cheap:[
+   ["KulturLegi Kanton Bern","Rabatt","Für Menschen mit kleinem Budget: zum Beispiel 50 % auf Ausstellungen, Begleitprogramme, Lesungen und Konzerte im Zentrum Paul Klee, dazu vergünstigte Deutschkurse und vieles mehr. Beantragen bei Caritas Bern.","https://www.kulturlegi.ch/kanton-bern/ueber-uns/kulturlegi-kanton-bern/","kulturlegi.ch"],
+   ["Zentrum Paul Klee: Fünfliber-Werkstatt","CHF 5","Kinder gestalten mit Erwachsenen im Kindermuseum Creaviva an Wochenenden und in den Schulferien ein eigenes Werk, für fünf Franken.","https://www.zpk.org/de/infos","zpk.org (Creaviva)"],
+  ],
+  foot:'Nur Angebote, die wir am '+V+' auf der verlinkten Seite gesehen haben. Daten für 2026; die Museums-Samstage sind jedes Jahr im August neu anzukündigen. Die Quelle gilt, nicht diese Seite. Kein Tracking. <a href="https://github.com/richardcervenka111-create/gratis-bern">GitHub</a> · MIT'},
+ en:{h:"Free Bern",s:"What costs nothing in this city, with source and check date ("+V+"). For families on a small budget, newcomers and everyone who did not know.",h1:"Always free",h2:"Free on certain days",h3:"Heavily discounted",src:"Source",chk:"checked",
+  always:[
+   ["Marzili and Lorraine river baths","free","The city’s Aare baths charge no admission: 50 m pool, children’s pools, diving tower, lawns, access to the Aare. Only lockers cost. Note: Marzili is in a second renovation phase since 14 Sept 2026.","https://www.sportamt-bern.ch/sportanlage/marzili/","Sportamt Bern"],
+   ["BärenPark","free","Open around the clock, every day, free of charge, on the Aare next to the Nydegg bridge. Also free: the animal enclosures in the Dählhölzli forest, along the Aare and the children’s zoo; only the vivarium of the zoo charges.","https://tierpark-bern.ch/baerenpark/oeffnungszeiten/","Tierpark Bern"],
+   ["Rosengarten, Gurten meadow, Aare banks, Elfenau","free","Public parks of the city, no admission. The Gurten funicular costs; the footpath up does not.","https://www.bern.ch","City of Bern (public green spaces)"],
+   ["Public fountains, barbecue spots, bookcases","free","Drinking water from over 100 fountains, 109 barbecue spots, 38 open bookcases. Maps: bern-trinkwasser, grillstelle-bern, buecherschraenke-bern (same folder).","https://www.openstreetmap.org/copyright","OpenStreetMap, as of 24 Sept 2026"],
+  ],
+  dates:[
+   ["Free museum Saturdays in August","1, 8, 15, 22, 29 August 2026","For the 11th time, 18 museums and cultural institutions in and around Bern open free on August Saturdays, a project of Museen Bern with the Burgergemeinde Bern and Migros Culture Percentage (2025: about 53,000 visits). Some houses have different dates or hours, see list.","https://gratisinsmuseum.ch/","gratisinsmuseum.ch",MUSEEN],
+   ["Zentrum Paul Klee: children and teens up to 16 free every Sunday","every Sunday","Exhibition admission for children and young people up to 16 is free every Sunday. Adults regular CHF 15, family ticket 1 adult + children CHF 21.","https://www.zpk.org/de/infos","zpk.org › Infos"],
+  ],
+  cheap:[
+   ["KulturLegi Canton of Bern","discount","For people on a small budget: for example 50 % off exhibitions, programmes, readings and concerts at Zentrum Paul Klee, plus discounted German courses and much more. Apply at Caritas Bern.","https://www.kulturlegi.ch/kanton-bern/ueber-uns/kulturlegi-kanton-bern/","kulturlegi.ch"],
+   ["Zentrum Paul Klee: five-franc workshop","CHF 5","Children create their own work with adults at the Creaviva children’s museum on weekends and school holidays, for five francs.","https://www.zpk.org/de/infos","zpk.org (Creaviva)"],
+  ],
+  foot:'Only offers we saw on the linked page on '+V+'. Dates are for 2026; the museum Saturdays are announced anew each August. The source prevails, not this page. No tracking. <a href="https://github.com/richardcervenka111-create/gratis-bern">GitHub</a> · MIT'},
+ sk:{h:"Bern zadarmo",s:"Čo v tomto meste nič nestojí, so zdrojom a dátumom overenia ("+V+"). Pre rodiny s malým rozpočtom, nových obyvateľov a všetkých, čo to nevedeli.",h1:"Vždy zadarmo",h2:"Zadarmo v určité dni",h3:"Výrazne lacnejšie",src:"Zdroj",chk:"overené",
+  always:[
+   ["Kúpaliská Marzili a Lorraine","zadarmo","Mestské kúpaliská na Aare nemajú vstupné: 50 m bazén, detské bazény, skokanská veža, trávniky, vstup do Aare. Platia sa len skrinky. Pozn.: Marzili je od 14. 9. 2026 v druhej etape sanácie.","https://www.sportamt-bern.ch/sportanlage/marzili/","Sportamt Bern"],
+   ["BärenPark","zadarmo","Nonstop, každý deň, voľne prístupný, priamo pri Aare pri moste Nydegg. Zadarmo aj výbehy v lese Dählhölzli, pri Aare a detská zoo; platí sa len vivárium zoo.","https://tierpark-bern.ch/baerenpark/oeffnungszeiten/","Tierpark Bern"],
+   ["Rosengarten, lúka na Gurtene, nábrežie Aare, Elfenau","zadarmo","Verejné parky mesta, bez vstupného. Lanovka na Gurten stojí, chodník hore nie.","https://www.bern.ch","Mesto Bern (verejná zeleň)"],
+   ["Verejné fontány, grily, knižné búdky","zadarmo","Pitná voda z vyše 100 fontán, 109 grilov, 38 otvorených knižných búdok. Mapy: bern-trinkwasser, grillstelle-bern, buecherschraenke-bern (rovnaký priečinok).","https://www.openstreetmap.org/copyright","OpenStreetMap, stav 24. 9. 2026"],
+  ],
+  dates:[
+   ["Múzeá zadarmo: päť augustových sobôt","1., 8., 15., 22., 29. augusta 2026","Po 11. raz otvára 18 múzeí a kultúrnych inštitúcií v Berne a okolí v augustové soboty zadarmo, projekt Museen Bern s Burgergemeinde Bern a Migros-Kulturprozent (2025: asi 53 000 návštev). Niektoré domy majú iné dátumy alebo hodiny, pozri zoznam.","https://gratisinsmuseum.ch/","gratisinsmuseum.ch",MUSEEN],
+   ["Zentrum Paul Klee: deti a mládež do 16 rokov každú nedeľu zadarmo","každú nedeľu","Vstup na výstavy pre deti a mládež do 16 rokov je každú nedeľu zadarmo. Dospelí 15 CHF, rodinný lístok 1 dospelý + deti 21 CHF.","https://www.zpk.org/de/infos","zpk.org › Infos"],
+  ],
+  cheap:[
+   ["KulturLegi kantón Bern","zľava","Pre ľudí s malým rozpočtom: napríklad 50 % na výstavy, sprievodné programy, čítania a koncerty v Zentrum Paul Klee, plus lacnejšie kurzy nemčiny a ďalšie. Žiada sa v Caritas Bern.","https://www.kulturlegi.ch/kanton-bern/ueber-uns/kulturlegi-kanton-bern/","kulturlegi.ch"],
+   ["Zentrum Paul Klee: päťfrankový ateliér","5 CHF","Deti s dospelými tvoria v detskom múzeu Creaviva cez víkendy a prázdniny vlastné dielo, za päť frankov.","https://www.zpk.org/de/infos","zpk.org (Creaviva)"],
+  ],
+  foot:'Len ponuky, ktoré sme '+V+' videli na odkazovanej stránke. Dátumy platia pre 2026; múzejné soboty sa oznamujú každý august nanovo. Platí zdroj, nie táto stránka. Žiadne sledovanie. <a href="https://github.com/richardcervenka111-create/gratis-bern">GitHub</a> · MIT'}};
+let lang="de"; const $=id=>document.getElementById(id); const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function card(o){ const T=L[lang]; return `<div class="o"><b>${esc(o[0])}</b><span class="p">${esc(o[1])}</span><div class="d">${esc(o[2])}</div>${o[5]?`<div class="list">${o[5].map(esc).join(" · ")}</div>`:""}<div class="m">${T.src}: <a href="${o[3]}" rel="noopener">${esc(o[4])}</a> · ${T.chk} ${V}</div></div>`; }
+function render(){ const T=L[lang]; document.documentElement.lang=lang; document.title=T.h; $("h").textContent=T.h; $("s").textContent=T.s; $("h1").textContent=T.h1; $("h2").textContent=T.h2; $("h3").textContent=T.h3; $("foot").innerHTML=T.foot;
+  $("always").innerHTML=T.always.map(card).join(""); $("dates").innerHTML=T.dates.map(card).join(""); $("cheap").innerHTML=T.cheap.map(card).join("");
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===lang?"true":"false")); }
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.l; render();}));
+render();
+})();
+</script>
+</body>
+</html>
